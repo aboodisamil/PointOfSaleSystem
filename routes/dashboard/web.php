@@ -6,5 +6,7 @@ Route::resource('users','UserController');
 Route::resource('','DashboardController');
 Route::resource('category','CategoryController');
 Route::resource('product','ProductController');
+Route::resource('client','ClientController');
+
 
 });

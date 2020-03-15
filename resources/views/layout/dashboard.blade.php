@@ -279,6 +279,7 @@
 
                     </ul>
                 </li>
+
                 <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-product-hunt"></i>
@@ -294,6 +295,26 @@
 
                         @if(auth()->user()->hasPermission('delete_products'))
                             <li><a href="panels.html">TRASH PRODUCT</a></li>
+                        @endif
+
+
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-user-plus"></i>
+                        <span>CLIENT</span>
+                    </a>
+                    <ul class="sub">
+                        @if(auth()->user()->hasPermission('create_clients'))
+                            <li><a href="{{  route('dashboard.client.create') }}">ADD CLIENT </a></li>
+                        @endif
+                        @if(auth()->user()->hasPermission('read_clients'))
+                            <li><a href="{{  route('dashboard.client.index') }}">VIEW CLIENT</a></li>
+                        @endif
+
+                        @if(auth()->user()->hasPermission('delete_clients'))
+                            <li><a href="panels.html">TRASH CLIENT</a></li>
                         @endif
 
 
