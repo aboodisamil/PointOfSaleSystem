@@ -7,6 +7,6 @@ Route::resource('','DashboardController');
 Route::resource('category','CategoryController');
 Route::resource('product','ProductController');
 Route::resource('client','ClientController');
-
+Route::resource('client.order','client\OrderController');
 
 });

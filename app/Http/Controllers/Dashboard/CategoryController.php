@@ -11,6 +11,14 @@ use mysql_xdevapi\Session;
 
 class CategoryController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['permission:read_categories'])->only('index');
+        $this->middleware(['permission:create_categories'])->only('create');
+        $this->middleware(['permission:update_categories'])->only('edit');
+        $this->middleware(['permission:delete_categories'])->only('destroy');
+
+    }
 
     public function index(Request $request)
     {

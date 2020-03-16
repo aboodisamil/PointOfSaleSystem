@@ -9,6 +9,15 @@ use App\Http\Controllers\Controller;
 
 class ClientController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['permission:read_clients'])->only('index');
+        $this->middleware(['permission:create_clients'])->only('create');
+        $this->middleware(['permission:update_clients'])->only('edit');
+        $this->middleware(['permission:delete_clients'])->only('destroy');
+
+
+    }
 
     public function index(Request $request)
     {

@@ -34,6 +34,7 @@
                     <th><i class="fa fa-bullhorn"></i>NAME</th>
                     <th><i class=" fa fa-edit"></i>PHONE</th>
                     <th><i class=" fa fa-edit"></i>ADDRESS</th>
+                    <th><i class=" fa fa-edit"></i>ADD ORDER</th>
                     <th><i class=" fa fa-edit"></i>STATUS</th>
                     <th><i class=" fa fa-edit"></i>ACTION</th>
                     <th></th>
@@ -61,7 +62,15 @@
 
                         </td>
 
+                        <td>
+                            @if(auth()->user()->hasPermission('create_orders'))
 
+                            <a href="{{route('dashboard.client.order.create' , $client->id)}}" class="btn-xs btn-primary">ADD ORDER</a>
+                            @else
+                                <a  href="#" disabled class="btn-xs btn-primary disabled">ADD ORDER</a>
+                            @endif
+
+                        </td>
 
                         <td><span class="label label-info label-mini">Due</span></td>
                         <td>

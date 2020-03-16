@@ -69,7 +69,7 @@
                 <div class="form-group"><label class="col-sm-2 col-sm-2 control-label">THE PERSMESSION</label>
                 </div>
                 @php
-                $models=['users','categories','products' , 'clients']
+                $models=['users','categories','products' , 'clients' , 'orders']
                 @endphp
 
                     <div class="panel-heading">
