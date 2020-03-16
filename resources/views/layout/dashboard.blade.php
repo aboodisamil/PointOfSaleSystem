@@ -234,7 +234,7 @@
                 <p class="centered"><a href="profile.html"><img style="height: 70px" src=" {{ auth()->user()->image }}" class="img-circle" width="80"></a></p>
                 <h5 class="centered"> {{ auth()->user()->first_name.' '.auth()->user()->last_name }}</h5>
                 <li class="mt">
-                    <a  href="{{ route('dashboard.users.index') }}">
+                    <a  href="{{ route('dashboard.index') }}">
                         <i class="fa fa-dashboard"></i>
                         <span>Dashboard</span>
                     </a>

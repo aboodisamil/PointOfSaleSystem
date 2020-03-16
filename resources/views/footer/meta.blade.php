@@ -17,3 +17,5 @@
 <script src="{{ asset('control/lib/sparkline-chart.js') }} "></script>
 <script src="{{ asset('control/lib/zabuto_calendar.js') }} "></script>
 <script src="{{ asset('control/ckeditor/ckeditor.js') }}"></script>
+<script src="{{ asset('control/lib/order.js') }} "></script>
+

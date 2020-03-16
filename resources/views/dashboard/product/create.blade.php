@@ -39,7 +39,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="col-sm-2 col-sm-2 control-label">PURCHASE PRICE</label>
+                    <label class="col-sm-2 col-sm-2 control-label" >PURCHASE PRICE</label>
                     <div class="col-sm-10">
                         <input type="number" name="purchase_price" class="form-control"
                                value="{{ old('purchase_price') }}">
@@ -50,7 +50,7 @@
                 <div class="form-group">
                     <label class="col-sm-2 col-sm-2 control-label">SALE PRICE</label>
                     <div class="col-sm-10">
-                        <input type="number" name="sale_price" class="form-control"
+                        <input type="number" name="sale_price" step="0.01" class="form-control"
                                value="{{ old('sale_price') }}">
                         <span style="color: red">{{ $errors->first('sale_price') }} </span>
                     </div>
