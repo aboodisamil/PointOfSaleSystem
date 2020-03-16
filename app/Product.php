@@ -28,4 +28,9 @@ return number_format($profit_percent ,2);
         return asset($image) ;
 
     }
+
+    public  function  orders()
+    {
+        return $this->belongsToMany(Order::class , 'product_orders');
+    }
 }
